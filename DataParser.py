@@ -132,7 +132,7 @@ def fetch_orcid_publication_data(orcid_id):
     publication_counts = {}  # Example placeholder
     return publication_counts
 
-def write_to_json(data, filename, output_dir):
+def write_to_json(data, filename):
     """
     Write data to a JSON file.
 
@@ -142,10 +142,8 @@ def write_to_json(data, filename, output_dir):
         Data to be written to the file
     filename : str
         Name of the file to be written
-    output_dir : str
-        Directory where the file will be saved
     """
-    with open(os.path.join(output_dir, filename), 'w') as json_file:
+    with open(filename, 'w') as json_file:
         json.dump(data, json_file)
 
 def main():
@@ -167,13 +165,9 @@ def main():
         'orcidbio': orcid_bio
     }
 
-    output_dir = 'output'
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    write_to_json(scholar_data, 'scholar_data.json', output_dir)
-    write_to_json(review_data, 'review.json', output_dir)
-    write_to_json(publication_data, 'pub.json', output_dir)
+    write_to_json(scholar_data, 'data_scholar.json')
+    write_to_json(review_data, 'data_review.json')
+    write_to_json(publication_data, 'data_pub.json')
 
 if __name__ == "__main__":
     main()
