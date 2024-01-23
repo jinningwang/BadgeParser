@@ -356,7 +356,7 @@ def write_readme(citations,
         badge_file.write("\n")
 
         # Write ORCID Peer Review badges
-        badge_file.write("## Peer Review fron ORCID\n")
+        badge_file.write("## Peer Review from ORCID\n")
         for journal_name, review_count in review_data.items():
             review_badge_markdown = generate_review_badge(
                 journal_name, review_count, color="blue", logo=None, link=None)
