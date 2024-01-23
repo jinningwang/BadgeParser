@@ -1,0 +1,29 @@
+name: Scrape Google Scholar Data
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day. Change as needed.
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4
+    - name: Run scraper
+      run: python parser.py
+    - name: Commit and push if changes
+      run: |
+        git config --global user.name 'Your Name'
+        git config --global user.email 'your-email@example.com'
+        git add -A
+        git diff --staged --quiet || git commit -m "Update Google Scholar data"
+        git push
