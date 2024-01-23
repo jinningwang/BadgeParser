@@ -1,4 +1,4 @@
-name: Scrape Google Scholar Data
+name: Scrape Scholar Data
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
       run: |
         pip install requests beautifulsoup4
     - name: Run scraper
-      run: python gsparser.py
+      run: python DataParser.py
     - name: Commit and push if changes
       run: |
         git config --global user.name 'jinningwang'
