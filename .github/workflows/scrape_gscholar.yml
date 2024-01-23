@@ -19,7 +19,7 @@ jobs:
       run: |
         pip install requests beautifulsoup4
     - name: Run scraper
-      run: python parser.py
+      run: python gsparser.py
     - name: Commit and push if changes
       run: |
         git config --global user.name 'Your Name'
