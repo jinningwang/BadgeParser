@@ -11,7 +11,7 @@ issn_to_journal = {
     'issn:1558-0679': 'TPWRS',
     'issn:2332-7707': 'OAJPE',
     'issn:2367-0983': 'PCMP',
-    'issn:2634-1581': 'ENC2',
+    'issn:2634-1581': 'EnergyConversionAndEconomics',
 }
 
 
