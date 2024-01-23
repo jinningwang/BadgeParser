@@ -6,13 +6,13 @@ import datetime
 
 # ISSN to Journal Mapping
 issn_to_journal = {
-    'issn:1949-3037': 'TSTE',
-    'issn:1949-3061': 'TSG',
-    'issn:1937-4208': 'TRWRD',
-    'issn:1558-0679': 'TPWRS',
-    'issn:2332-7707': 'OAJPE',
-    'issn:2367-0983': 'PCMP',
-    'issn:2634-1581': 'EnergyConversionAndEconomics',
+    'issn:1949-3037': 'IEEE Transactions on Sustainable Energy',
+    'issn:1949-3061': 'IEEE Transactions on Smart Grid',
+    'issn:1937-4208': 'IEEE Transactions on Power Delivery',
+    'issn:1558-0679': 'IEEE Transactions on Power Systems',
+    'issn:2332-7707': 'IEEE Open Access Journal of Power and Energy',
+    'issn:2367-0983': 'Protection and Control of Modern Power Systems',
+    'issn:2634-1581': 'Energy Conversion and Economics',
 }
 
 
@@ -236,7 +236,7 @@ def generate_citation_badge(citations, logo=None, link=None):
     str
         The Markdown code for the badge.
     """
-    label = "G Scholar Citations"  # Label without URL encoding
+    label = "Google Scholar Citations"  # Label without URL encoding
     message = citations
     color = "blue"  # You can choose a color for the badge
 
