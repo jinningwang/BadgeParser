@@ -67,7 +67,7 @@ def fetch_researchgate_stats(profile_url):
 
     except requests.exceptions.RequestException as e:
         logging.error(f"Error while fetching ResearchGate stats: {e}")
-        return None
+        return {}
 
     # NOTE: skip, write the HTML to a file for debugging
     # with open("data_researchgate.txt", "w", encoding='utf-8') as file:
@@ -331,8 +331,8 @@ def write_readme(citations,
     # --- ResearchGate Statistics Badge ---
     for stat_name, stat_value in researchgate_stats.items():
         researchgate_badge_markdown = generate_citation_badge(stat_value,
-                                                              logo="researchgate",
-                                                              link=None)
+                                                            logo="researchgate",
+                                                            link=None)
         msg = f"{stat_name}: {researchgate_badge_markdown}"
         logging.info("Research Gate: " + msg)
 
