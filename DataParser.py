@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import logging
+import datetime
 
 # ISSN to Journal Mapping
 issn_to_journal = {
@@ -331,14 +332,17 @@ def write_readme(citations,
     # --- ResearchGate Statistics Badge ---
     for stat_name, stat_value in researchgate_stats.items():
         researchgate_badge_markdown = generate_citation_badge(stat_value,
-                                                            logo="researchgate",
-                                                            link=None)
+                                                              logo="researchgate",
+                                                              link=None)
         msg = f"{stat_name}: {researchgate_badge_markdown}"
         logging.info("Research Gate: " + msg)
 
     # --- Write to README.md ---
-    # BadgeParser
-    readme_header = "# BadgeParser\nCreate customized badges.\n"
+    # Header for the README.md file
+    current_date = datetime.datetime.now().strftime("%Y-%m-%d")
+    readme_header = "# BadgeParser\n"
+    readme_header += "Create customized badges.\n"
+    readme_header += f"Last Updated: {current_date}\n"
 
     # Write the badge Markdown code to Badge.md
     with open("README.md", "w") as badge_file:
