@@ -1,6 +1,6 @@
 # BadgeParser
 Create customized badges.
-Last Updated: 2024-05-17
+Last Updated: 2024-05-18
 ## Google Scholar
 ![Google Scholar Citations](https://img.shields.io/badge/Google%20Scholar%20Citations-116-blue.svg?logo=googlescholar&link=https://scholar.google.com/citations?user=Wr7nQZAAAAAJ&hl=en&oi=ao)
 ## Bio from ORCID
