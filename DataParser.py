@@ -378,7 +378,8 @@ def main():
     gs_citations = scrape_google_scholar(gs_profile_url)
 
     # Fetch ResearchGate statistics
-    researchgate_stats = fetch_researchgate_stats(researchgate_url)
+    # researchgate_stats = fetch_researchgate_stats(researchgate_url)
+    researchgate_stats = {}
 
     # Fetch ORCID data
     orcid_bio = fetch_orcid_bio(orcid_id)
