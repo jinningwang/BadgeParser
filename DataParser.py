@@ -5,15 +5,7 @@ import logging
 import datetime
 
 # ISSN to Journal Mapping
-issn_to_journal = {
-    'issn:1949-3037': 'IEEE Transactions on Sustainable Energy',
-    'issn:1949-3061': 'IEEE Transactions on Smart Grid',
-    'issn:1937-4208': 'IEEE Transactions on Power Delivery',
-    'issn:1558-0679': 'IEEE Transactions on Power Systems',
-    'issn:2332-7707': 'IEEE Open Access Journal of Power and Energy',
-    'issn:2367-0983': 'Protection and Control of Modern Power Systems',
-    'issn:2634-1581': 'Energy Conversion and Economics',
-}
+issn_to_journal = json.loads(open('./data/issn2journal.json').read())
 
 
 def scrape_google_scholar(profile_url):
@@ -403,9 +395,9 @@ def main():
         'orcidbio': orcid_bio
     }
 
-    write_to_json(scholar_data, 'data_scholar.json')
-    write_to_json(review_data, 'data_review.json')
-    write_to_json(publication_data, 'data_pub.json')
+    write_to_json(scholar_data, './results/scholar.json')
+    write_to_json(review_data, './results/review.json')
+    write_to_json(publication_data, './results/pub.json')
 
 
 if __name__ == "__main__":
