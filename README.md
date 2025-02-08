@@ -1,8 +1,8 @@
 # BadgeParser
 Create customized badges.
-Last Updated: 2025-02-07
+Last Updated: 2025-02-08
 ## Google Scholar
-![Google Scholar Citations](https://img.shields.io/badge/Google%20Scholar%20Citations-216-blue.svg?logo=googlescholar&link=https://scholar.google.com/citations?user=Wr7nQZAAAAAJ&hl=en&oi=ao)
+![Google Scholar Citations](https://img.shields.io/badge/Google%20Scholar%20Citations-217-blue.svg?logo=googlescholar&link=https://scholar.google.com/citations?user=Wr7nQZAAAAAJ&hl=en&oi=ao)
 ## Bio from ORCID
 Jinning Wang is currently pursuing a Ph.D. degree in electrical engineering at the University of Tennessee, Knoxville, TN, USA. His research interests include Data Mining, Scientific Computation, and Power System Simulation.
 Jinning Wang is the author of power system dispatch simulator AMS, which is a key component of the CURENT Large-scale Testbed (LTB). He has been coordinating the development efforts for the LTB since 2021. He also built and maintains the list Popular Open Source Libraries for Power System Analysis.
